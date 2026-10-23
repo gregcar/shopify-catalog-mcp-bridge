@@ -1,0 +1,27 @@
+{
+  "name": "shopify-catalog-mcp-bridge",
+  "version": "0.1.0",
+  "description": "Standards-compatible MCP bridge for Shopify's global catalog, with UCP profile injection.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "repository": "github:gregcar/shopify-catalog-mcp-bridge",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run build && node --test dist/test/*.test.js",
+    "test:live": "npm run build && node dist/scripts/smoke.js",
+    "start": "node dist/src/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "eventsource-parser": "3.1.1",
+    "express": "5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "5.0.6",
+    "@types/node": "24.19.2",
+    "typescript": "5.9.3"
+  }
+}
